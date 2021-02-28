@@ -6,6 +6,7 @@ public class Teacher {
      String name;
      String subject;
 
+
     public Teacher(String name, String subject) {
         this.name = name;
         this.subject = subject;
@@ -28,7 +29,7 @@ public class Teacher {
         this.subject = subject;
     }
 
-    public void evaluate(Student username) {
+    public void evaluate(Student student) {
         Random random = new Random();
         int a = 2;
         int b = 5;
@@ -51,6 +52,6 @@ public class Teacher {
                break;
         }
         System.out.println("Преподаватель" + " " + getName() + " " + "оценил студента" + " "
-                + "с именем"   + " " + "по предмету" + " " + subject + " " + "на оценку" + " " + s);
+                + "с именем"  + " " + student.name + " " + "по предмету" + " " + subject + " " + "на оценку" + " " + s);
     }
 }
