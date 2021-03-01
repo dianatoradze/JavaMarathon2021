@@ -3,14 +3,15 @@ package day6;
 import java.util.Random;
 
 public class Teacher {
-     String name;
-     String subject;
+    private String name;
+    private String subject;
 
 
     public Teacher(String name, String subject) {
         this.name = name;
         this.subject = subject;
     }
+
     public void setName(String username) {
         name = username;
     }
@@ -18,9 +19,7 @@ public class Teacher {
     public String getName() {
         return name;
     }
-    public void setNameStudent(String username) {
-        name = username;
-    }
+
     public String getSubject() {
         return subject;
     }
@@ -37,21 +36,19 @@ public class Teacher {
         String s = "";
         switch (grade) {
             case 2:
-             s = "неудовлетворительно";
+                s = "неудовлетворительно";
                 break;
             case 3:
-                 s ="удовлетворительно";
+                s = "удовлетворительно";
                 break;
             case 4:
                 s = "хорошо";
                 break;
-            case 5:
-                s = "отлично" ;
-                break;
             default:
-               break;
+                s = "отлично";
+                break;
         }
         System.out.println("Преподаватель" + " " + getName() + " " + "оценил студента" + " "
-                + "с именем"  + " " + student.name + " " + "по предмету" + " " + subject + " " + "на оценку" + " " + s);
+                + "с именем" + " " + student.name + " " + "по предмету" + " " + subject + " " + "на оценку" + " " + s);
     }
 }
