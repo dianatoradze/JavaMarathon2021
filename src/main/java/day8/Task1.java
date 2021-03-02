@@ -4,21 +4,22 @@ import java.util.Random;
 
 public class Task1 {
     public static void main(String[] args) {
-        Random random = new Random();
-        int a = 0;
-        int b = 20;
-        int strings = a + random.nextInt(b - a + 1);
 
+        int a = 0;
+        int b = 20000;
+
+        String strings = "";
         long start1 = System.currentTimeMillis();
         for (int i = a; i <= b; i++) {
-            System.out.print(i + " ");
+            strings += i + " ";
         }
         long finish1 = System.currentTimeMillis();
         long time1 = finish1 - start1;
+        System.out.print(strings);
         System.out.println();
         System.out.println("Способ 1 - " + time1);
         long start2 = System.currentTimeMillis();
-        StringBuilder sb = new StringBuilder(strings);
+        StringBuilder sb = new StringBuilder();
         for (int i = a; i <= b; i++) {
             sb.append(i + " ");
         }
