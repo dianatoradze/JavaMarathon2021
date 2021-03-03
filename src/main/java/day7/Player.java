@@ -31,6 +31,7 @@ public class Player {
         if (stamina == 0) {
             countPlayers--;
         }
+        return;
     }
 
     public static void info() {
